@@ -9,4 +9,20 @@ before_install:
 install:      
       - sudo npm uninstall -g yarn
       - sudo npm install -g yarn
-script: ant main
+before_script:
+      - npm -V
+      - yarn -V
+jobs:
+  include:
+    - stage: 'Install Chrome'
+      name: 'Compile project'
+      script: 
+            - apt-get update
+            - apt-get -y -f install
+            - apt-get install wget
+            - apt-get -y install libgconf2-4 libnss3-1d libxss1
+            - umount /dev/shm
+            - mount -t tmpfs -o rw,nosuid,nodev,noexec,relatime,size=512M tmpfs /dev/shm
+            - export CHROME_BIN=/usr/bin/google-chrome
+
+
