@@ -1,2 +1,8 @@
 language: java
+sudo: required
+before_install:
+      "sudo apt-get update
+      sudo apt-get -y --fix-missing install npm
+      sudo npm install -g n
+      sudo n stable"
 script: ant main
