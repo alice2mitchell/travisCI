@@ -20,6 +20,6 @@ jobs:
             - sudo apt-get -y install libgconf2-4 libnss3-1d libxss1
             - sudo umount /dev/shm
             - sudo mount -t tmpfs -o rw,nosuid,nodev,noexec,relatime,size=512M tmpfs /dev/shm
-            - sudo export CHROME_BIN=/usr/bin/google-chrome
+            - export CHROME_BIN=/usr/bin/google-chrome
 
 
