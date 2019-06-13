@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - HelloWorld",
+            "request": "launch",
+            "mainClass": "cc.engeld.HelloWorld",
+            "projectName": "test-travis-master_545e1718"
+        }
+    ]
+}
