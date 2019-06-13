@@ -14,12 +14,12 @@ jobs:
     - stage: 'Install Chrome'
       name: 'Install Chrome'
       script: 
-            - apt-get update
-            - apt-get -y -f install
-            - apt-get install wget
-            - apt-get -y install libgconf2-4 libnss3-1d libxss1
-            - umount /dev/shm
-            - mount -t tmpfs -o rw,nosuid,nodev,noexec,relatime,size=512M tmpfs /dev/shm
-            - export CHROME_BIN=/usr/bin/google-chrome
+            - sudo apt-get update
+            - sudo apt-get -y -f install
+            - sudo apt-get install wget
+            - sudo apt-get -y install libgconf2-4 libnss3-1d libxss1
+            - sudo umount /dev/shm
+            - sudo mount -t tmpfs -o rw,nosuid,nodev,noexec,relatime,size=512M tmpfs /dev/shm
+            - sudo export CHROME_BIN=/usr/bin/google-chrome
 
 
