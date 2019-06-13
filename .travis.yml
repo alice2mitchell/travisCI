@@ -9,13 +9,10 @@ before_install:
 install:      
       - sudo npm uninstall -g yarn
       - sudo npm install -g yarn
-before_script:
-      - npm -V
-      - yarn -V
 jobs:
   include:
     - stage: 'Install Chrome'
-      name: 'Compile project'
+      name: 'Install Chrome'
       script: 
             - apt-get update
             - apt-get -y -f install
